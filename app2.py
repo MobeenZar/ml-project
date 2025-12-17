@@ -1,5 +1,5 @@
 import streamlit as st
-from math_utils import add, subtract, multiply, divide
+from math_utils import add, subtract, multiply, divide, modulus
 
 st.title("Simple Math Operations App")
 
@@ -8,7 +8,7 @@ num2 = st.number_input("Enter second number", value=0.0, key="num2")
 
 operation = st.selectbox(
     "Choose operation",
-    ("Add", "Subtract", "Multiply", "Divide")
+    ("Add", "Subtract", "Multiply", "Divide", "Modulus")
 )
 
 if st.button("Calculate"):
@@ -20,5 +20,7 @@ if st.button("Calculate"):
         result = multiply(num1, num2)
     elif operation == "Divide":
         result = divide(num1, num2)
+    elif operation == "Modulus":
+        result = modulus(num1, num2)    
 
     st.success(f"Result: {result}")
