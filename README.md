@@ -38,3 +38,6 @@ docker images
 docker tag python-cal-app-zar:latest mobeenzar/python-cal-app:v1.0
 docker push mobeenzar/python-cal-app:v1.0
 
+To push a local created branch to remote
+git push --set-upstream origin feature-branch
+
